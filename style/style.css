@@ -1,0 +1,329 @@
+/** All **/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #111;
+  color: #eee;
+  min-height: 100vh;
+  font-weight: bold;
+}
+
+a {
+  color: #eee;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #ff4d6d;
+}
+
+/** Header ------------------------------------- **/
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+  background-color: #222;
+}
+
+/** Search ------------------------------------- **/
+
+.search {
+  display: flex;
+  flex-grow: 1;
+}
+
+.search-input {
+  width: 40%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  font-weight: bold;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
+}
+
+.search-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: #ff4d6d;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.search-btn:active {
+  transform: scale(0.95) translateX(-2px);
+}
+
+.search-btn:hover {
+  background-color: #ff8fa3;
+}
+
+/** Nav ------------------------------------- **/
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/** Main ------------------------------------ **/
+
+.main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/** Section --------------------------------- **/
+
+.section {
+  background-color: #222;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/** Grid ------------------------------------ **/
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+/** Card ------------------------------------ **/
+
+.card {
+  background-color: #333;
+  border-radius: 8px;
+  transition: 0.4s;
+  animation: fade 0.8s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(255, 77, 109, 0.4);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  filter: grayscale(0.6) brightness(0.8);
+  transition: 0.4s;
+}
+
+.card:hover img {
+  filter: grayscale(0) brightness(1);
+}
+
+.card h3 {
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+  transition: 0.4s;
+}
+
+.card:hover h3 {
+  color: #ff4d6d;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/** To Top ---------------------------------- **/
+
+.to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background-color: #ff4d6d;
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.to-top:active {
+  transform: scale(0.95);
+}
+
+.to-top:hover {
+  background-color: #ff8fa3;
+  box-shadow: 0 0 20px rgba(255, 77, 109, 0.4);
+  color: #fff;
+}
+
+/** Footer ---------------------------------- **/
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+}
+
+/** Scroll ---------------------------------- **/
+
+.to-top.show {
+  display: block;
+}
+
+/** Theme-1 White ----------------------------------- **/
+
+.theme-btn {
+  padding: 10px 10px;
+  border: none;
+  border-radius: 6px 6px 6px 6px;
+  background-color: #ff4d6d;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.theme-btn:active {
+  transform: scale(0.95);
+}
+
+.theme-btn:hover {
+  background-color: #ff8fa3;
+  box-shadow: 0 0 20px rgba(255, 77, 109, 0.4);
+  color: #fff;
+}
+
+body.light {
+  background-color: #f2f2f2;
+  color: #222;
+}
+
+body.light a {
+  color: #222;
+}
+
+body.light .header,
+body.light .section {
+  background-color: #fff;
+}
+
+body.light .card {
+  background-color: #e6e6e6;
+}
+
+body.light a:hover {
+  color: #ff4d6d;
+}
+
+/** Theme-2 Blue ---------------------------- **/
+
+body.blue {
+  background-color: #e9faff;
+  color: #f5fbff;
+}
+
+body.blue a {
+  color: #edf8ff;
+}
+
+body.blue a:hover {
+  color: #00d9ff;
+}
+
+body.blue .header,
+body.blue .section {
+  background-color: #b5e3ff;
+}
+
+body.blue .card {
+  background-color: #84cce2;
+}
+
+body.blue .search-btn {
+  background-color: #00c3ff;
+}
+
+body.blue .search-btn:hover {
+  background-color: #abebff;
+}
+
+body.blue .footer {
+  color: #0d64b6;
+}
+
+body.blue .card:hover h3 {
+  color: #9ee8ff;
+}
+
+body.blue .search-input:focus {
+  outline: none;
+  box-shadow: 0 0 20px rgb(129, 230, 255);
+}
+
+body.blue .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgb(129, 230, 255);
+}
+
+body.blue .to-top {
+  background-color: #00c3ff;
+  color: #fff;
+  transition: 0.3s;
+}
+
+body.blue .to-top:hover {
+  background-color: #31cfff;
+  box-shadow: 0 0 20px rgb(129, 230, 255);
+  color: #edf8ff;
+}
+
+body.blue .card:hover h3 {
+  color: #00d9ff;
+}
+
+/** Theme Button Colors --------------------- **/
+
+body.light .theme-btn {
+  background-color: #ff4d6d;
+}
+
+body.light .theme-btn:hover {
+  background-color: #ff8fa3;
+  box-shadow: none;
+}
+
+body.blue .theme-btn {
+  background-color: #00c3ff;
+}
+
+body.blue .theme-btn:hover {
+  box-shadow: 0 0 20px rgb(129, 230, 255);
+}
