@@ -1,4 +1,5 @@
 const btn = document.querySelector(".to-top");
+const themeBtn = document.querySelector(".theme-btn");
 
 if (btn) {
   window.addEventListener("scroll", () => {
@@ -9,8 +10,6 @@ if (btn) {
     }
   });
 }
-
-const themeBtn = document.querySelector(".theme-btn");
 
 if (themeBtn) {
   themeBtn.addEventListener("click", () => {

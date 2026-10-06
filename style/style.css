@@ -1,3 +1,13 @@
+:root {
+  --bg: #111;
+  --surface: #222;
+  --card: #333;
+  --text: #eee;
+  --text-muted: #888;
+  --accent: #ff4d6d;
+  --accent-hover: #ff8fa3;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,20 +16,20 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #111;
-  color: #eee;
+  background-color: var(--bg);
+  color: var(--text);
   min-height: 100vh;
   font-weight: bold;
 }
 
 a {
-  color: #eee;
+  color: var(--text);
   text-decoration: none;
   transition: 0.3s;
 }
 
 a:hover {
-  color: #ff4d6d;
+  color: var(--accent);
 }
 
 .header {
@@ -27,7 +37,7 @@ a:hover {
   align-items: center;
   gap: 20px;
   padding: 10px 20px;
-  background-color: #222;
+  background-color: var(--surface);
 }
 
 .search {
@@ -52,7 +62,7 @@ a:hover {
   padding: 10px 16px;
   border: none;
   border-radius: 0 6px 6px 0;
-  background-color: #ff4d6d;
+  background-color: var(--accent);
   color: #fff;
   cursor: pointer;
   font-weight: bold;
@@ -64,7 +74,7 @@ a:hover {
 }
 
 .search-btn:hover {
-  background-color: #ff8fa3;
+  background-color: var(--accent-hover);
 }
 
 .nav {
@@ -80,7 +90,7 @@ a:hover {
 }
 
 .section {
-  background-color: #222;
+  background-color: var(--surface);
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
@@ -98,7 +108,7 @@ a:hover {
 }
 
 .card {
-  background-color: #333;
+  background-color: var(--card);
   border-radius: 8px;
   transition: 0.4s;
   animation: fade 0.8s;
@@ -131,7 +141,7 @@ a:hover {
 }
 
 .card:hover h3 {
-  color: #ff4d6d;
+  color: var(--accent);
 }
 
 @keyframes fade {
@@ -151,7 +161,7 @@ a:hover {
   z-index: 10;
   padding: 10px 16px;
   border-radius: 8px;
-  background-color: #ff4d6d;
+  background-color: var(--accent);
   color: #fff;
   font-size: 20px;
   transition: 0.3s;
@@ -166,7 +176,7 @@ a:hover {
 }
 
 .to-top:hover {
-  background-color: #ff8fa3;
+  background-color: var(--accent-hover);
   box-shadow: 0 0 20px rgba(255, 77, 109, 0.4);
   color: #fff;
 }
@@ -174,14 +184,14 @@ a:hover {
 .footer {
   text-align: center;
   padding: 20px;
-  color: #888;
+  color: var(--text-muted);
 }
 
 .theme-btn {
   padding: 10px 10px;
   border: none;
-  border-radius: 6px 6px 6px 6px;
-  background-color: #ff4d6d;
+  border-radius: 6px;
+  background-color: var(--accent);
   color: #fff;
   cursor: pointer;
   font-weight: bold;
@@ -193,7 +203,7 @@ a:hover {
 }
 
 .theme-btn:hover {
-  background-color: #ff8fa3;
+  background-color: var(--accent-hover);
   box-shadow: 0 0 20px rgba(255, 77, 109, 0.4);
   color: #fff;
 }
@@ -217,7 +227,7 @@ body.theme-light .card {
 }
 
 body.theme-light a:hover {
-  color: #ff4d6d;
+  color: var(--accent);
 }
 
 body.theme-blue {
@@ -285,11 +295,11 @@ body.theme-blue .card:hover h3 {
 }
 
 body.theme-light .theme-btn {
-  background-color: #ff4d6d;
+  background-color: var(--accent);
 }
 
 body.theme-light .theme-btn:hover {
-  background-color: #ff8fa3;
+  background-color: var(--accent-hover);
   box-shadow: none;
 }
 
