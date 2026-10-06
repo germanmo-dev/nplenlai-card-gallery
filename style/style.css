@@ -1,5 +1,3 @@
-/** All **/
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -24,8 +22,6 @@ a:hover {
   color: #ff4d6d;
 }
 
-/** Header ------------------------------------- **/
-
 .header {
   display: flex;
   align-items: center;
@@ -33,8 +29,6 @@ a:hover {
   padding: 10px 20px;
   background-color: #222;
 }
-
-/** Search ------------------------------------- **/
 
 .search {
   display: flex;
@@ -73,23 +67,17 @@ a:hover {
   background-color: #ff8fa3;
 }
 
-/** Nav ------------------------------------- **/
-
 .nav {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
-/** Main ------------------------------------ **/
-
 .main {
   max-width: 1200px;
   margin: 20px auto;
   padding: 0 20px;
 }
-
-/** Section --------------------------------- **/
 
 .section {
   background-color: #222;
@@ -103,15 +91,11 @@ a:hover {
   margin-bottom: 8px;
 }
 
-/** Grid ------------------------------------ **/
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 16px;
 }
-
-/** Card ------------------------------------ **/
 
 .card {
   background-color: #333;
@@ -159,9 +143,8 @@ a:hover {
   }
 }
 
-/** To Top ---------------------------------- **/
-
 .to-top {
+  display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -174,6 +157,10 @@ a:hover {
   transition: 0.3s;
 }
 
+.to-top.show {
+  display: block;
+}
+
 .to-top:active {
   transform: scale(0.95);
 }
@@ -184,21 +171,11 @@ a:hover {
   color: #fff;
 }
 
-/** Footer ---------------------------------- **/
-
 .footer {
   text-align: center;
   padding: 20px;
   color: #888;
 }
-
-/** Scroll ---------------------------------- **/
-
-.to-top.show {
-  display: block;
-}
-
-/** Theme-1 White ----------------------------------- **/
 
 .theme-btn {
   padding: 10px 10px;
@@ -221,109 +198,105 @@ a:hover {
   color: #fff;
 }
 
-body.light {
+body.theme-light {
   background-color: #f2f2f2;
   color: #222;
 }
 
-body.light a {
+body.theme-light a {
   color: #222;
 }
 
-body.light .header,
-body.light .section {
+body.theme-light .header,
+body.theme-light .section {
   background-color: #fff;
 }
 
-body.light .card {
+body.theme-light .card {
   background-color: #e6e6e6;
 }
 
-body.light a:hover {
+body.theme-light a:hover {
   color: #ff4d6d;
 }
 
-/** Theme-2 Blue ---------------------------- **/
-
-body.blue {
+body.theme-blue {
   background-color: #e9faff;
   color: #f5fbff;
 }
 
-body.blue a {
+body.theme-blue a {
   color: #edf8ff;
 }
 
-body.blue a:hover {
+body.theme-blue a:hover {
   color: #00d9ff;
 }
 
-body.blue .header,
-body.blue .section {
+body.theme-blue .header,
+body.theme-blue .section {
   background-color: #b5e3ff;
 }
 
-body.blue .card {
+body.theme-blue .card {
   background-color: #84cce2;
 }
 
-body.blue .search-btn {
+body.theme-blue .search-btn {
   background-color: #00c3ff;
 }
 
-body.blue .search-btn:hover {
+body.theme-blue .search-btn:hover {
   background-color: #abebff;
 }
 
-body.blue .footer {
+body.theme-blue .footer {
   color: #0d64b6;
 }
 
-body.blue .card:hover h3 {
+body.theme-blue .card:hover h3 {
   color: #9ee8ff;
 }
 
-body.blue .search-input:focus {
+body.theme-blue .search-input:focus {
   outline: none;
   box-shadow: 0 0 20px rgb(129, 230, 255);
 }
 
-body.blue .card:hover {
+body.theme-blue .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 0 20px rgb(129, 230, 255);
 }
 
-body.blue .to-top {
+body.theme-blue .to-top {
   background-color: #00c3ff;
   color: #fff;
   transition: 0.3s;
 }
 
-body.blue .to-top:hover {
+body.theme-blue .to-top:hover {
   background-color: #31cfff;
   box-shadow: 0 0 20px rgb(129, 230, 255);
   color: #edf8ff;
 }
 
-body.blue .card:hover h3 {
+body.theme-blue .card:hover h3 {
   color: #00d9ff;
 }
 
-/** Theme Button Colors --------------------- **/
-
-body.light .theme-btn {
+body.theme-light .theme-btn {
   background-color: #ff4d6d;
 }
 
-body.light .theme-btn:hover {
+body.theme-light .theme-btn:hover {
   background-color: #ff8fa3;
   box-shadow: none;
 }
 
-body.blue .theme-btn {
+body.theme-blue .theme-btn {
   background-color: #00c3ff;
 }
 
-body.blue .theme-btn:hover {
+body.theme-blue .theme-btn:hover {
   box-shadow: 0 0 20px rgb(129, 230, 255);
 }
