@@ -114,13 +114,13 @@ body {
   transform: scale(0.95);
 }
 
-.main {
+.catalog {
   max-width: 1200px;
   margin: 20px auto;
   padding: 0 20px;
 }
 
-.section {
+.catalog-section {
   background-color: var(--surface);
   padding: 20px;
   margin-bottom: 20px;
@@ -235,7 +235,7 @@ body {
 }
 
 .theme-light .header,
-.theme-light .section {
+.theme-light .catalog-section {
   background-color: #ffffff;
 }
 
@@ -268,7 +268,7 @@ body {
 }
 
 .theme-blue .header,
-.theme-blue .section {
+.theme-blue .catalog-section {
   background-color: #b5e3ff;
 }
 
