@@ -4,9 +4,9 @@ const themeBtn = document.querySelector(".theme-btn");
 if (btn) {
   window.addEventListener("scroll", () => {
     if (window.scrollY > 300) {
-      btn.classList.add("show");
+      btn.classList.add("to-top--show");
     } else {
-      btn.classList.remove("show");
+      btn.classList.remove("to-top--show");
     }
   });
 }
