@@ -1,9 +1,11 @@
 const btn = document.querySelector(".to-top");
 const themeBtn = document.querySelector(".theme-btn");
+const THEMES = ["", "theme-light", "theme-blue"];
+const SCROLL_THRESHOLD = 300;
 
 if (btn) {
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
+    if (window.scrollY > SCROLL_THRESHOLD) {
       btn.classList.add("to-top--show");
     } else {
       btn.classList.remove("to-top--show");
@@ -11,15 +13,15 @@ if (btn) {
   });
 }
 
+let themeIndex = 0;
+
 if (themeBtn) {
   themeBtn.addEventListener("click", () => {
-    if (document.body.classList.contains("theme-light")) {
-      document.body.classList.remove("theme-light");
-      document.body.classList.add("theme-blue");
-    } else if (document.body.classList.contains("theme-blue")) {
-      document.body.classList.remove("theme-blue");
-    } else {
-      document.body.classList.add("theme-light");
+    document.body.classList.remove("theme-light", "theme-blue");
+    themeIndex = (themeIndex + 1) % THEMES.length;
+    const next = THEMES[themeIndex];
+    if (next) {
+      document.body.classList.add(next);
     }
   });
 }
