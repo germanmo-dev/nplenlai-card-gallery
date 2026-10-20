@@ -19,7 +19,6 @@ body {
   background-color: var(--bg);
   color: var(--text);
   min-height: 100vh;
-  font-weight: bold;
 }
 
 .header {
