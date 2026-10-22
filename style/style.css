@@ -6,6 +6,26 @@
   --text-muted: #888888;
   --accent: #ff4d6d;
   --accent-hover: #ff8fa3;
+  --glow: rgba(255, 77, 109, 0.4);
+}
+
+.theme-light {
+  --bg: #f2f2f2;
+  --surface: #ffffff;
+  --card: #e6e6e6;
+  --text: #222222;
+  --text-muted: #666666;
+}
+
+.theme-blue {
+  --bg: #e9faff;
+  --surface: #b5e3ff;
+  --card: #84cce2;
+  --text: #0b3c5d;
+  --text-muted: #0d64b6;
+  --accent: #00c3ff;
+  --accent-hover: #31cfff;
+  --glow: rgb(129, 230, 255);
 }
 
 * {
@@ -70,7 +90,7 @@ body {
 
 .search__input:focus {
   outline: none;
-  box-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
+  box-shadow: 0 0 10px var(--glow);
 }
 
 .search__btn {
@@ -105,8 +125,7 @@ body {
 
 .theme-btn:hover {
   background-color: var(--accent-hover);
-  box-shadow: 0 0 20px rgba(255, 77, 109, 0.4);
-  color: #ffffff;
+  box-shadow: 0 0 20px var(--glow);
 }
 
 .theme-btn:active {
@@ -146,7 +165,7 @@ body {
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 20px rgba(255, 77, 109, 0.4);
+  box-shadow: 0 0 20px var(--glow);
 }
 
 .card__img {
@@ -204,8 +223,7 @@ body {
 
 .to-top:hover {
   background-color: var(--accent-hover);
-  box-shadow: 0 0 20px rgba(255, 77, 109, 0.4);
-  color: #ffffff;
+  box-shadow: 0 0 20px var(--glow);
 }
 
 .to-top:active {
